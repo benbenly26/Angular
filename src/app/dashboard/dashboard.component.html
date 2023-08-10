@@ -1,0 +1,258 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<!--Dashboard-->
+<div ngClass="container-fluid">
+  <section id="dashboardSection">
+    <div ngClass="container-fluid">
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <i class="fad fa-route map-icon"></i>
+            <span id="app">App Settings</span>
+          </li>
+          <li class="breadcrumb-item active mt-1" id="itemMenu" aria-current="page">
+            Inventory
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!--    Line Chart-->
+    <div ngClass="container-fluid row p-4 mt-4">
+      <div ngClass="col-10 row" style="height: 28em">
+        <div ngClass="col-7 line">
+          <app-line-chart></app-line-chart>
+        </div>
+        <!--    Line Chart End-->
+        <!--     Locations Card-->
+        <div ngClass="col-5">
+          <div class="card location-card">
+            <div class="card-body">
+              <div ngClass="justify-content-between d-flex">
+                <h4 class="card-title">Most Signed Locations</h4>
+                <div ngClass="case-drive d-flex">
+                  <label ngClass="input-group-text"><i class="fas fa-filter" id="filter"></i></label>
+                  <select class="form-select custom-select" aria-label="Default select example">
+                    <option value="0">CaseDrive</option>
+                    <option value="1">CaseDrive V2</option>
+                  </select>
+                </div>
+              </div>
+              <hr/>
+              <div ngClass="d-flex justify-content-between" id="title">
+                <h5>Locations</h5>
+                <h5>Device Count</h5>
+              </div>
+              <div id="details">
+                <ul>
+                  <li class="justify-content-between d-flex mt-1">
+                    <h5>California,USA</h5>
+                    <div ngClass="number me-5">
+                      <h5>10</h5>
+                    </div>
+                  </li>
+                  <li class="justify-content-between d-flex mt-2">
+                    <h5>Atlanta,USA</h5>
+                    <div ngClass="number me-5">
+                      <h5>6</h5>
+                    </div>
+                  </li>
+                  <li class="justify-content-between d-flex mt-2">
+                    <h5>Washington,USA</h5>
+                    <div ngClass="number me-5">
+                      <h5>13</h5>
+                    </div>
+                  </li>
+                  <li class="justify-content-between d-flex mt-2">
+                    <h5>New York,USA</h5>
+                    <div ngClass="number me-5">
+                      <h5>9</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer text-center bg-white" id="footer">
+              <a routerLink="/reports" class="btn btn-primary button-details" href="#" role="button">More
+                Details</a>
+            </div>
+          </div>
+        </div>
+        <!--     Locations Card End-->
+        <!--        2nd row Total apps Card-->
+        <div ngClass="row mt-4">
+          <div ngClass="col-3">
+            <a routerLink="/applications" href="#" ngClass="apps-btn">
+              <div class="card">
+                <div class="card-body">
+                  <h4 ngClass="total-apps">Total Apps</h4>
+                  <br>
+                  <div ngClass="total-apps-icon d-flex justify-content-around" style="font-size: 4em">
+                    <h4 ngClass="total-number">4</h4>
+                    <i class="fas fa-shapes" style="color: #7610c6"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--        2nd row Total apps Card End-->
+          <!--          2nd Row Recent Activities Card-->
+          <div ngClass="col-5">
+            <div ngClass="card">
+              <div class="card-body">
+                <h4 ngClass="recent-activities">Recent Activities</h4>
+                <div ngClass="user-activities d-flex justify-content-around mt-4">
+                  <i class="fas fa-circle" style="font-size: 10px;color:#000080;"></i>
+                  <h5 ngClass="mb-0">10 Users added recently</h5>
+                  <i class="fas fa-circle" style="font-size: 10px;color:#04AA6D;margin-left: 5em"></i>
+                  <h5 ngClass="mb-0">3 Active Users</h5>
+                </div>
+              </div>
+              <div class="card-footer text-center bg-white" id="recentActivitiesFooter">
+                <a routerLink="/reports" class="btn btn-primary button-details" href="#" role="button">More
+                  Details</a>
+              </div>
+            </div>
+          </div>
+          <!--          2nd Row Recent Activities Card End-->
+          <!--          2nd Row Signed Info Card-->
+          <div ngClass="col-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 ngClass="sign-in-info">Sign-in Info</h4>
+                <div ngClass="d-flex justify-content-between mt-4" id="signInfo">
+                  <a routerLink="/reports" href="#" class="number-color align-items-center d-flex flex-column">
+                    <h5>Successful sign-ins</h5>
+                    <h5 style="color: #00C64F">24</h5>
+                  </a>
+                  <a routerLink="/reports" href="#" class="number-color align-items-center d-flex flex-column">
+                    <h5>Failed sign-ins</h5>
+                    <h5 style="color: #ff3300;">6</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--          2nd Row Signed Info Card End-->
+        <!--        3rd Row Applications Details-->
+        <div ngClass="row mt-4">
+          <div ngClass="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 ngClass="app-detail-title">Applications Details :</h5>
+                <div ngClass="application-title d-flex justify-content-between mt-4">
+                  <h4 ngClass="d-flex"><i class="fas fa-circle d-flex align-items-center me-2"
+                                          style="font-size: 10px;color:#000080;"></i>Application Name</h4>
+                  <h4 ngClass="d-flex"><i class="fas fa-circle d-flex align-items-center me-2"
+                                          style="font-size: 10px;color:#ff800c;"></i>Total Users</h4>
+                  <h4 ngClass="d-flex"><i class="fas fa-circle d-flex align-items-center me-2"
+                                          style="font-size: 10px;color:#00c64f;"></i>Active Users</h4>
+                </div>
+                <a href="#" ngClass="application-btn d-flex justify-content-between mt-3">
+                  <h5>1.Case Drive</h5>
+                  <h5>50</h5>
+                  <h5>15</h5>
+                </a>
+                <a href="#" ngClass="application-btn d-flex justify-content-between">
+                  <h5>2.MedLine</h5>
+                  <h5>24</h5>
+                  <h5>8</h5>
+                </a>
+              </div>
+              <div class="card-footer text-center bg-white" id="applicationDetailsFooter">
+                <a routerLink="/applications" class="btn btn-primary app-details-btn" href="#" role="button">More
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--        3rd Row Applications Details End-->
+      <!--      Settings Card-->
+      <div ngClass="col-2">
+        <div ngClass="card" id="settingsCard">
+          <button type="button" class="settings-btn">
+            <div ngClass="icon-container">
+              <i class="fas fa-cog"></i>
+            </div>
+          </button>
+          <h4 ngClass="app-title mt-2">Apps Dashboard</h4>
+          <a ngbDropdown class="d-inline-block dropdown mt-2">
+            <button type="button" class="case-drive-dropdown mt-3" data-bs-toggle="dropdown" aria-expanded="false">
+              CaseDrive
+              <i class="far fa-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li><a class="dropdown-item" href="#">CaseDrive</a></li>
+              <li><a class="dropdown-item" href="#">MedLine</a></li>
+              <li><a class="dropdown-item" href="#">Cost Estimator</a></li>
+              <li><a class="dropdown-item" href="#">Sample 2</a></li>
+            </ul>
+          </a>
+          <h4 ngClass="app-title mt-5">Top-Used Apps</h4>
+          <!--          Progressbar-->
+          <div class="progress-items-title mt-4">
+            <h4>1.CaseDrive</h4>
+            <div class="progress-wrapper">
+              <div class="progress">
+                <div class="progress-bar green" role="progressbar" style="width: 100%" aria-valuenow="100"
+                     aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+              <span ngClass="progress-value">100%</span>
+            </div>
+          </div>
+          <div class="progress-items-title mt-4">
+            <h4>2.MedLine</h4>
+            <div class="progress-wrapper">
+              <div class="progress">
+                <div class="progress-bar orange" role="progressbar" style="width: 75%" aria-valuenow="75"
+                     aria-valuemin="0" aria-valuemax="75">
+                </div>
+              </div>
+              <span class="progress-value">75%</span>
+            </div>
+          </div>
+          <div class="progress-items-title mt-4">
+            <h4>3.Cost Estimator</h4>
+            <div class="progress-wrapper">
+              <div class="progress">
+                <div class="progress-bar blue" role="progressbar" style="width: 45%" aria-valuenow="45"
+                     aria-valuemin="0" aria-valuemax="45">
+                </div>
+              </div>
+              <span class="progress-value">45%</span>
+            </div>
+          </div>
+          <div class="progress-items-title mt-4">
+            <h4>4.Sample 2</h4>
+            <div class="progress-wrapper">
+              <div class="progress">
+                <div class="progress-bar red" role="progressbar" style="width: 65%" aria-valuenow="65"
+                     aria-valuemin="0" aria-valuemax="10">
+                </div>
+              </div>
+              <span class="progress-value">65%</span>
+            </div>
+          </div>
+          <div class="storage-menu">
+            <h4 class="app-title mt-5 storage-menu">Storage Capacity</h4>
+            <div class="progress-items-title mt-4">
+              <div class="progress-wrapper">
+                <div class="progress">
+                  <div class="progress-bar storage-color" role="progressbar" style="width: 15%" aria-valuenow="15"
+                       aria-valuemin="0" aria-valuemax="10">
+                  </div>
+                </div>
+                <span class="progress-value">50GB</span>
+                <span class="storage-used">15% Used</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      Settings Card End-->
+    </div>
+  </section>
+</div>
+<!--<app-footer></app-footer>-->

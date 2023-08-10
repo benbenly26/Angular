@@ -1,0 +1,89 @@
+<div ngClass="sidebar-wrapper">
+  <CDBSidebar [ngClass]="'sideBar'" textColor="#050505" backgroundColor="#f3f3f3"
+              style="border-radius: 25px;box-shadow: 2px 1px 2px 0px #78787891;left: 8px">
+    <CDBSidebarContent ngClass="mt-5">
+      <CDBSidebarMenu>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-th-large icon me-4"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/company" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fas fa-building icon me-4"></i>
+              <span>Company</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/applications" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-shapes icon me-4"></i>
+              <span>Applications</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/admins" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-user-cog icon me-4"></i>
+              <span>Admins</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/users" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-users icon me-4"></i>
+              <span>Users</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/configurerole" ngClass="text d-flex">
+              <i ngClass="fad fa-user icon me-4"></i>
+              <span>Configure Role</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/groups" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-users-class icon me-4"></i>
+              <span>Groups</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/reports" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-chart-pie me-4"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+        <CDBSidebarMenuItem>
+          <li>
+            <a routerLink="/domain" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+               ngClass="text d-flex">
+              <i ngClass="fad fa-browser me-4"></i>
+              <span>Domain</span>
+            </a>
+          </li>
+        </CDBSidebarMenuItem>
+      </CDBSidebarMenu>
+    </CDBSidebarContent>
+  </CDBSidebar>
+</div>

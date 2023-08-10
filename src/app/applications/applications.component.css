@@ -1,0 +1,192 @@
+body {
+  position: relative;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  box-shadow: rgba(120, 120, 120, 0.57) 2px 1px 2px 0px;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 94px;
+  left: 300px;
+  height: 100vh;
+  width: calc(100% - 305px);
+  border-radius: 25px;
+  margin-right: auto;
+}
+
+#items {
+  text-align: center;
+}
+
+.breadcrumb-nav {
+  margin-top: 2em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  width: 100%;
+  height: 5em;
+}
+
+.map-icon {
+  color: #ffffff;
+  background-color: #7610C6;
+  border-radius: 7px;
+  padding: 5px;
+  font-size: 30px;
+}
+
+#app {
+  font-family: 'Alata', sans-serif;
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+#itemMenu {
+  font-family: 'Alata', sans-serif;
+  font-size: 23px;
+  color: #7610C6;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: black !important;
+}
+
+.title h4 {
+  font-family: 'Alata', sans-serif;
+}
+
+.app-btn {
+  color: #ffffff;
+  background-color: #7610C6;
+  font-family: 'Alata', sans-serif;
+  border-color: #7610C6;
+}
+
+.app-btn:focus {
+  background-color: #000080;
+}
+
+hr {
+  background-color: #000;
+  height: 3px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#searchForm {
+  position: relative;
+}
+
+.inline-search-icon {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1em;
+  color: #807b7b;
+  padding: 5px;
+  text-align: center;
+}
+
+#searchBar {
+  position: relative;
+  border-color: #e7e2e2;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.list h4 {
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
+}
+
+/*Modal*/
+
+.circle-left {
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000080;
+  padding: 1px;
+}
+
+.modal-title {
+  font-size: 26px !important; /* Set the desired font size */
+  margin-bottom: -15px;
+  color: #7610C6;
+  font-family: 'Alata', sans-serif;
+}
+
+.form-control {
+  width: 300px;
+}
+
+.modal-header {
+  border-bottom: 2px solid #918989;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+#modalSearchBar {
+  position: relative;
+  border-color: #e7e2e2;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.modal-search-icon {
+  position: absolute;
+  left: 294px;
+  top: 25px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 22px;
+  color: #000080;
+}
+
+.card {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#addAppModal .custom-card img {
+  width: 20%;
+  margin-left: 20%;
+}
+
+.custom-card h4 {
+  font-family: 'Alata', sans-serif;
+}
+
+.custom-card {
+  background-color: #f1f1f1;
+}
+
+.add-app-btn {
+  color: #ffffff;
+  background-color: #7610C6;
+  font-family: 'Alata', sans-serif;
+  border-color: #7610C6;
+  height: 45px;
+  padding: 8px;
+}
+
+.add-app-btn:focus {
+  background-color: #000080;
+}

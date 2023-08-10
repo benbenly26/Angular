@@ -1,0 +1,31 @@
+.sidebar-wrapper{
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  margin-top: 6em;
+  margin-left: 5px;
+}
+.text {
+  padding: 10px;
+  border-radius: 7px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  width: 100%;
+  text-decoration: none
+}
+
+.text:hover {
+  background-color: #7610C6;
+  color: white !important;
+}
+
+.text.active {
+  background-color: #7610C6;
+  color: white;
+}
+
+a {
+  color: black;
+}

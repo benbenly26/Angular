@@ -1,0 +1,198 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div ngClass="container-fluid">
+
+  <section id="adminsSection">
+
+    <div ngClass="container-fluid">
+      <nav aria-label="breadcrumb" ngClass="breadcrumb-nav">
+        <ol ngClass="breadcrumb">
+          <li ngClass="breadcrumb-item">
+            <i ngClass="fad fa-route map-icon"></i>
+            <span id="app">App Settings</span>
+          </li>
+          <li ngClass="breadcrumb-item active mt-1" id="itemMenu" aria-current="page">
+            Admins
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!--    Modal Button-->
+    <div class="col d-flex justify-content-end">
+      <button type="submit" class="btn btn btn-primary mt-5 d-flex justify-content-end my-custom-button-admin"
+              data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="fad fa-users-crown me-2 mt-1"></i>Add Admin
+      </button>
+    </div>
+    <!--    Modal-->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <form class="modal-content">
+          <!--          Modal Header-->
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #7610C6">Add Admin</h1>
+            <button type="button" class="fas fa-chevron-circle-left circle-left" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <!--          Modal Body-->
+          <div class="modal-body p-5">
+            <!--            1st Row-->
+
+            <div class="row title-info">
+              <h4>Personal Information</h4>
+            </div>
+            <div class="row mt-2">
+              <!--              FirstName-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="firstName">First Name<sup><i class="fas fa-asterisk text-danger"
+                                                                          style="font-size: 8px"></i></sup></label>
+                <input type="text" class="form-control w-75" id="firstName" placeholder="John" [formControl]="firstName"
+                       required>
+                <div *ngIf="firstName.errors?.['required'] && firstName.touched" class="text-danger">
+                  First Name is missing.
+                </div>
+              </div>
+              <!--              secondName-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="secondName">Second Name</label>
+                <input type="text" class="form-control w-75" id="secondName" placeholder="Doe">
+              </div>
+              <!--              email-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="email">Email address<sup><i class="fas fa-asterisk text-danger"
+                                                                         style="font-size: 8px"></i></sup>
+                </label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="johndoe@lezdotechmed.com" [formControl]="email">
+                <div *ngIf="email.errors?.['required'] && email.touched" class="text-danger">
+                  Email is required.
+                </div>
+                <div *ngIf="email.errors?.['email'] && email.touched" class="text-danger">
+                  Not a valid email address.
+                </div>
+              </div>
+              <!--              phoneNumber-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="phoneNumber">Phone Number<sup><i class="fas fa-asterisk text-danger"
+                                                                              style="font-size: 8px"></i></sup></label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="Mobile Number"
+                       [formControl]="number">
+                <div *ngIf="number.errors?.['required'] && number.touched" class="text-danger">
+                  Please Enter a valid Number.
+                </div>
+                <div *ngIf="number.errors?.['pattern'] && number.touched" class="text-danger">
+                  Please enter a valid 10-digit phone number.
+                </div>
+              </div>
+            </div>
+            <!--            2nd Row-->
+            <div class="row title-info">
+              <h4>Organization Information</h4>
+              <div class="row mt-2">
+                <!--                employeeID-->
+                <div class="col-6 form-group mb-3">
+                  <label class="my-label" for="employeeID">Employee ID</label>
+                  <input type="text" class="form-control" id="employeeID" placeholder="e.g.LDTM001">
+                  <p style="font-style: italic">
+                    <span class="text-success" style="font-weight:700;font-size: 14px">Note:</span>
+                    <span
+                      style="font-size: 14px">Enter your Employee ID, or else system will generate one automatically</span>
+                  </p>
+                </div>
+                <!--                Department-->
+                <div class="col-6 form-group mb-3">
+                  <label class="my-label" for="department">Department<sup><i class="fas fa-asterisk text-danger"
+                                                                             style="font-size: 8px"></i></sup></label>
+                  <input type="text" class="form-control" id="department" placeholder="Department Name"
+                         [formControl]="department">
+                  <div *ngIf="department.errors?.['required'] && department.touched" class="text-danger">
+                    Please provide your Department Information.
+                  </div>
+                </div>
+                <!--                rollInfo-->
+                <div class="col-6 form-group mb-3">
+                  <label class="my-label" for="roll">Roll<sup><i class="fas fa-asterisk text-danger"
+                                                                 style="font-size: 8px"></i></sup></label>
+                  <input type="text" class="form-control" id="roll" placeholder="roll" [formControl]="rollInfo">
+                  <div *ngIf="rollInfo.errors?.['required'] && rollInfo.touched" class="text-danger">
+                    Please provide your Roll.
+                  </div>
+                </div>
+                <!--                location-->
+                <div class="col-6 form-group mb-3">
+                  <label class="my-label" for="location" id="location">Location</label>
+                  <select class="form-select custom-select" aria-label="Default select example">
+                    <option value="0">Usa</option>
+                    <option value="1">New York</option>
+                    <option value="2">Canada</option>
+                    <option value="3">India</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--            3rd Row -->
+            <!--language-->
+            <div class="row">
+              <h4>Other Information</h4>
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="language" id="language">Language</label>
+                <select class="form-select custom-select" aria-label="Default select example">
+                  <option value="0">English</option>
+                  <option value="1">Spanish</option>
+                  <option value="2">French</option>
+                </select>
+              </div>
+              <!--              Date_picker-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label">Date Of Birth<sup><i class="fas fa-asterisk text-danger"
+                                                                       style="font-size: 8px"></i></sup></label>
+                <app-ngbd-datepicker-popup></app-ngbd-datepicker-popup>
+              </div>
+              <!--              timeZone-->
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="timeZone">Time Zone<sup><i class="fas fa-asterisk text-danger"
+                                                                        style="font-size: 8px"></i></sup></label>
+                <input type="text" class="form-control" id="timeZone">
+              </div>
+              <div class="col-6 form-group mb-3">
+                <label class="my-label" for="gender" id="gender">Gender</label>
+                <select class="form-select custom-select" aria-label="Default select example">
+                  <option value="0">Male</option>
+                  <option value="1">Female</option>
+                  <option value="2">X</option>
+                  <option value="3">Y</option>
+                  <option value="4">XX</option>
+                  <option value="5">XY</option>
+                  <option value="6">Trans Male</option>
+                  <option value="7">Trans Female</option>
+                  <option value="8">Non-Binary</option>
+                  <option value="9">UnKnown</option>
+                  <option value="10">Male to Female</option>
+                  <option value="11">Female to male</option>
+                  <option value="12">Cisgender</option>
+                  <option value="13">Cisgender male</option>
+                  <option value="14">Cisgender Female</option>
+                  <option value="15">Bigender</option>
+                  <option value="16">All The above</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <!--          button-->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-add me-2">Add</button>
+            <button type="button" class="btn btn-secondary btn-cancel" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr>
+  </section>
+</div>
+<!--<app-footer></app-footer>-->
+
+

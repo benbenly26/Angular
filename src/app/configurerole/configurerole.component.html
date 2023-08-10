@@ -1,0 +1,153 @@
+<div class="row container-fluid">
+  <div class="col-6">
+    <div ngClass="chartLine">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+  <div class="col-6">
+    <h4>Date Picker</h4>
+    <app-ngbddatepicker-basic></app-ngbddatepicker-basic>
+  </div>
+</div>
+<!--Angular card-->
+<a ngbDropdown ngClass="d-inline-block dropdown me-5">
+  <button type="button" id="caseDrive" data-bs-toggle="dropdown" aria-expanded="false"
+          style="color: #FFFFFF;background-color: #7610C6">
+    CaseDrive
+    <i ngClass="fas fa-chevron-down" style="color: #FFFFFF"></i>
+  </button>
+  <ul ngClass="dropdown-menu" id="dropdownMenu">
+    <li><a ngClass="dropdown-item" href="#">CaseDrive</a></li>
+    <li><a ngClass="dropdown-item" href="#">MedLine</a></li>
+    <li><a ngClass="dropdown-item" href="#">Cost Estimator</a></li>
+    <li><a ngClass="dropdown-item" href="#">Sample 2</a></li>
+  </ul>
+</a>
+<!--Settings-->
+<button type="button" id="settingsBtn">
+<span ngClass="icon-container">
+  <i ngClass="fas fa-cog"></i>
+</span>
+</button>
+Bootstrap Cards
+<div ngClass="card">
+  <div ngClass="card-body">
+    Most Signed Locations
+    <hr/>
+    Locations
+  </div>
+  <div>
+    California USA
+  </div>
+</div>
+<!--Row and Col-->
+<div class="container-fluid row">
+  <div class="col-10 row">
+    <div class="col-6" id="ben"><h5>col-md-6 </h5></div>
+    <div class="col-4" id="ani"><h5>col-md-4</h5></div>
+    <div class="row">
+      <div class="col-3" id="sud"><h5>col-md-3</h5></div>
+      <div class="col-5" id="sun"><h5>col-md-5</h5></div>
+      <div class="col-4" id="tl">
+        <h5>col-md-4</h5>
+        <h5>col-md-4</h5>
+        <h5>col-md-4</h5>
+        <h5>col-md-4</h5>
+        <h5>col-md-4</h5>
+        <h5>col-md-4</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-2" id="tib">
+    <h5>col-md-2</h5>
+    <h5>col-md-2</h5>
+  </div>
+  <div class="row">
+    <div class="col" id="ash">
+      <h5>col-md-9</h5>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image.jpg" alt="Card Image">
+  <h2>Card Title</h2>
+  <p>Card Description</p>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 text-center d-flex justify-content-center">
+      <h4>Email Id:</h4>
+      <input class="form-control" name="email" type="text" [(ngModel)]="values" (change)="getDetails();">
+    </div>
+    <div class="col-6 d-flex">
+      <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search Here.."
+             aria-label="Search" id="searchBar" [(ngModel)]="value">
+      <button type="submit" ngClass="inline-search-icon fad fa-search" (click)="onSearch()"></button>
+    </div>
+  </div>
+</div>
+
+<!--b Modal-->
+
+<!-- Button trigger modal -->
+<div class="container-fluid row">
+  <div class="col justify-content-end d-flex">
+    <button type="button" class="app-btn btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Add Applications
+    </button>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header mt-2">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Applications</h1>
+        <button type="button" class="fas fa-chevron-circle-left circle-left" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <form ngClass="form-inline ms-3 my-0 d-flex" id="searchForm">
+          <input ngClass="form-control" type="text" name="search" placeholder="Search Apps.."
+                 aria-label="Search" id="modalSearchBar">
+          <button type="submit" ngClass="modal-search-icon fad fa-search"></button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--card inside row and col-->
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        Content for your first column here
+      </div>
+      <div class="col">
+        Content for your second column here
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Input-->
+<div class="row container-fluid">
+  <div class="col">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+  </div>
+</div>
+

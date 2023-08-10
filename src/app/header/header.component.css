@@ -1,0 +1,179 @@
+.btn {
+  width: 15%;
+}
+
+a {
+  color: black;
+}
+
+.inline-search-icon {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#searchForm {
+  position: relative;
+}
+
+#navbarBg {
+  background: #F3F3F3;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 2px 1px 2px 0px #78787891;
+  width: 99%;
+  margin-left: 10px;
+  position: fixed;
+  z-index: 999;
+}
+
+#searchBar {
+  position: relative;
+  width: 450px;
+  border-radius: 15px;
+  border: #807b7b;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1em;
+  color: #807b7b;
+  padding: 5px;
+  text-align: center;
+}
+
+#windowIcon {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#stopWatch {
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 5px;
+  font-size: 25px;
+  box-shadow: 1px 1px 10px 0px #78787891;
+  padding: 5px;
+  width: 75px;
+}
+
+.dropdown-toggle::after {
+  color: #595959;
+}
+
+#notification {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#bellIcon {
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 25px;
+  right: 10px;
+}
+
+#bellIcon:hover {
+  color: #FFA105;
+}
+
+#verticalDivider {
+  position: absolute;
+  height: 40px;
+  border-left: 2px solid #78787891;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  right: 72px;
+}
+
+#dropdownMenu {
+  left: -43px;
+  font-family: 'Alata', sans-serif;
+}
+
+.dropdown-item {
+  color: #807b7b;
+}
+
+.dropdown-item:hover {
+  color: black;
+}
+
+.dropdown-item:active {
+  color: #FFA105;
+  background-color: #F3F3F3 !important;
+}
+
+.badge {
+  position: absolute;
+  background-color: #7610C6;
+  font-size: 12px;
+  left: 20px;
+  bottom: 22px;
+}
+
+#notificationMenu {
+  font-family: 'Poppins', sans-serif;
+  left: -20em;
+  width: 382px;
+  top: 43px;
+  border-radius: 10px;
+  box-shadow: 1px 0px 7px 0px #78787891;
+  padding: 1em;
+}
+
+#read {
+  color: #7610C6;
+  left: 0px;
+  font-size: 13px;
+  margin: auto;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  top: 10px;
+}
+
+hr {
+  color: #cdc9c9;
+  opacity: 1;
+  height: 2px;
+}
+
+.content {
+  text-decoration: none;
+}
+
+.scrollable {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+.name-title {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+.name-content {
+  font-size: 16px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.read {
+  color: #807b7b;
+}

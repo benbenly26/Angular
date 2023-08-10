@@ -1,0 +1,123 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+
+<div class="container-fluid">
+
+  <section id="applicationsSection">
+
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <i class="fad fa-route map-icon"></i>
+            <span id="app">App Settings</span>
+          </li>
+          <li class="breadcrumb-item active mt-1" id="itemMenu" aria-current="page">
+            Applications
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div ngClass="row mt-3 container-fluid">
+      <div ngClass="title col-6 d-flex">
+        <h4>Applications</h4>
+        <form class="form-inline ms-3 my-0" id="searchForm">
+          <input class="form-control" type="text" name="search" placeholder="Search Applications.."
+                 aria-label="Search" id="searchBar" [(ngModel)]="value">
+          <button type="submit" class="inline-search-icon fad fa-search" (click)="searchBtn()"></button>
+        </form>
+      </div>
+      <!--b Modal-->
+      <!-- Button trigger modal -->
+      <div class="col-6 d-flex justify-content-end">
+        <button type="button" class="app-btn btn btn-primary mb-2" data-bs-toggle="modal"
+                data-bs-target="#addAppModal">Add Applications
+        </button>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="addAppModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+           aria-labelledby="addAppModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header mt-2">
+              <h1 class="modal-title fs-5">Add Applications</h1>
+              <button type="button" class="fas fa-chevron-circle-left circle-left" data-bs-dismiss="modal"
+                      aria-label="Close">
+              </button>
+            </div>
+            <!--            Card Body-->
+            <div class="modal-body">
+              <form class="form-inline ms-3 my-0 d-flex">
+                <input class="form-control" type="text" name="search" placeholder="Search Apps.."
+                       aria-label="Search" id="modalSearchBar">
+                <button type="submit" ngClass="modal-search-icon fad fa-search"></button>
+              </form>
+              <!--              cards-->
+              <div ngClass="row mt-5">
+                <div ngClass="col-4">
+                  <div class="card custom-card">
+                    <div class="card-body">
+                      <div ngClass="row">
+                        <div ngClass="col-9">
+                          <img src="../../assets/shopping-cart.svg">
+                          <h4>Application Name</h4>
+                        </div>
+                        <div ngClass="col-3 d-flex justify-content-end mt-4">
+                          <button type="button" class="add-app-btn btn btn-primary"><h4>Add</h4></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div ngClass="col-4">
+                  <div class="card custom-card">
+                    <div class="card-body">
+                      <div ngClass="row">
+                        <div ngClass="col-9">
+                          <img src="../../assets/heart.svg">
+                          <h4>Application Name</h4>
+                        </div>
+                        <div ngClass="col-3 d-flex justify-content-end mt-4">
+                          <button type="button" class="add-app-btn btn btn-primary"><h4>Add</h4></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div ngClass="col-4">
+                  <div class="card custom-card">
+                    <div class="card-body">
+                      <div ngClass="row">
+                        <div ngClass="col-9">
+                          <img src="../../assets/sun.svg">
+                          <h4>Application Name</h4>
+                        </div>
+                        <div ngClass="col-3 d-flex justify-content-end mt-4">
+                          <button type="button" class="add-app-btn btn btn-primary"><h4>Add</h4></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--              card end-->
+            </div>
+            <!--            Card Body ends-->
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <!--      Modal End-->
+      <hr>
+    </div>
+    <div ngClass="container-fluid row p-4">
+      <div ngClass="list col d-flex justify-content-between">
+        <h4>App Name</h4>
+        <h4>Owner</h4>
+        <h4>Members</h4>
+        <h4>Groups</h4>
+      </div>
+    </div>
+  </section>
+</div>
+<!--<app-footer></app-footer>-->

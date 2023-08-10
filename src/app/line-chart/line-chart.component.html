@@ -1,0 +1,26 @@
+<div ngClass="card line-chart-card">
+  <div ngClass="card-header d-inline-flex justify-content-between bg-white">
+    <h5 ngClass="mt-1 title">User Analytics</h5>
+    <div ngClass="d-flex">
+      <div ngClass="month me-2 d-flex">
+        <label ngClass="input-group-text"><i ngClass="fas fa-filter"></i></label>
+        <select ngClass="form-select custom-select" aria-label="Default select example">
+          <option selected>Last Month</option>
+          <option value="1">Last Week</option>
+          <option value="2">Last 30days</option>
+        </select>
+      </div>
+      <div ngClass="case-drive d-flex">
+        <label ngClass="input-group-text"><i ngClass="fas fa-filter" id="filter"></i></label>
+        <select ngClass="form-select custom-select" aria-label="Default select example">
+          <option selected>CaseDrive</option>
+          <option value="1">CaseDrive V2</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div ngClass="chart-line">
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+

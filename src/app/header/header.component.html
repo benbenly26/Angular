@@ -1,0 +1,134 @@
+<nav class="navbar navbar-expand-lg navbar-light" id="navbarBg">
+
+  <a class="navbar-brand" href="#"><i class="fa fa-close"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a style="text-decoration: none" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <button type="submit" class="fas fa-window-close ms-3" id="windowIcon"
+            style="font-size: 40px;color:#EA5B5B"></button>
+    <form class="form-inline my-2 my-lg-0 ms-3" id="searchForm">
+      <input class="form-control mr-sm-2 border" type="text" name="search" placeholder="Search Here.."
+             aria-label="Search" id="searchBar" [(ngModel)]="value">
+      <button type="submit" class="inline-search-icon fad fa-search mb-2" (click)="onSearch()"></button>
+    </form>
+  </a>
+  <a ngbDropdown ngClass="d-inline-block dropdown me-5">
+    <button type="button" id="stopWatch" ngClass="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <i ngClass="far fa-stopwatch" style="color:#595959"></i>
+    </button>
+    <ul ngClass="dropdown-menu" id="dropdownMenu">
+      <li><a ngClass="dropdown-item" href="#">Add User</a></li>
+      <li><a ngClass="dropdown-item" href="#">Create Group</a></li>
+      <li><a ngClass="dropdown-item" href="#">Reset Password</a></li>
+    </ul>
+  </a>
+  <a id="verticalDivider"></a>
+  <a ngbDropdown ngClass="d-inline-block dropdown me-4">
+    <button type="button" id="bellIcon" data-bs-toggle="dropdown" aria-expanded="false">
+      <i ngClass="fad fa-bell"></i>
+      <span ngClass="badge badge-light">{{number}}</span>
+    </button>
+    <div ngClass="notifications-wrapper">
+      <ul ngClass="dropdown-menu" id="notificationMenu">
+        <div ngClass="notification-heading justify-content-between d-flex">
+          <h5 ngClass="menu-title ms-1 mt-4" id="notificationTitle">Notifications</h5>
+          <h6 ngClass="menu-title pull-right me-1 mt-4" id="read">Mark all as read<i></i></h6>
+        </div>
+        <hr>
+        <div ngClass="scrollable">
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/clfmli4up000ll608ys07ztj8_1.jpg" ngClass="profile-pic"
+                     alt="Avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 unread">
+                <h5 ngClass="name-title">Daenerys Targaryen</h5>
+                <p ngClass="name-content">Queen Daenerys I Targaryen is the younger sister of Rhaegar Targaryen</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/Jon_Snow_Season_8.png" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h5 ngClass="name-title">Jon Snow</h5>
+                <p>Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/arya-stark-1920.jpg" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h4 ngClass="name-title">Arya Stark</h4>
+                <p>Arya Stark is the third child of Eddard Stark and Catelyn Stark.</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/p8818291_b_v8_aa.jpg" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h4 ngClass="name-title">Dexter Morgan</h4>
+                <p>Dexter Morgan, a man with homicidal tendencies, lives a double life</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/64759d5c12162ed01ecac004904c729c.jpg" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h4 ngClass="name-title">Michael Scofield</h4>
+                <p>Michael Scofield robs a bank only to be caught and jailed. With him behind the bars he brings a plan
+                  to get himself and his brother, who is sentenced to death</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/Dark%20Netflix.png" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h4 ngClass="name-title">Jonas</h4>
+                <p>Jonas Kahnwald was one of the two main influencers of the Knot, born to Michael and Hannah
+                  Kahnwald.</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a ngClass="content d-flex justify-content-start" href="#">
+              <div ngClass="notify-image">
+                <img src="../../assets/download.jpg" ngClass="profile-pic"
+                     alt="avatar"/>
+              </div>
+              <div ngClass="ms-3 mt-1 read">
+                <h4 ngClass="name-title">Martha</h4>
+                <p>Martha Nielsen was the daughter of Ulrich and Katharina Nielsen who was the love interest of Jonas
+                  Kahnwald.</p>
+              </div>
+            </a>
+          </li>
+        </div>
+        <hr>
+      </ul>
+    </div>
+  </a>
+</nav>

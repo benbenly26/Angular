@@ -1,0 +1,47 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<!--Reports-->
+<div class="container-fluid">
+  <section id="reportsSection">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <i class="fad fa-route map-icon"></i>
+            <span id="app">App Settings</span>
+          </li>
+          <li class="breadcrumb-item active mt-1" id="itemMenu" aria-current="page">
+            Reports
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="row container-fluid mt-5">
+      <div ngClass="col-4">
+        <div class="card custom-card">
+          <a href="#" class="card-body mt-3 align-items-center d-flex flex-column">
+            <img src="../../assets/networking.png" alt="users.png">
+            <h4>Users</h4>
+          </a>
+        </div>
+      </div>
+      <div ngClass="col-4">
+        <div class="card custom-card">
+          <a href="#" class="card-body mt-3 align-items-center d-flex flex-column">
+            <img src="../../assets/register.png" alt="login.png">
+            <h4>Login</h4>
+          </a>
+        </div>
+      </div>
+      <div ngClass="col-4">
+        <div class="card custom-card">
+          <a routerLink="/applications" href="#" class="card-body mt-3 align-items-center d-flex flex-column">
+            <img src="../../assets/categories.png" alt="applications.png">
+            <h4>Applications</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!--<app-footer></app-footer>-->
